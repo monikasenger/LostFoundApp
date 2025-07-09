@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    color: #2e2e2e;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* ===== Form Styling ===== */
+form {
+    max-width: 520px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-left: 6px solid #00bcd4;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 14.5px;
+    color: #37474f;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0, 188, 212, 0.3);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===== Buttons ===== */
+input[type="submit"],
+button,
+input[type="button"] {
+    background: linear-gradient(to right, #00bcd4, #0097a7);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: linear-gradient(to right, #0097a7, #00796b);
+    transform: scale(1.03);
+}
+
+/* ===== Nav Buttons ===== */
+.nav-buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    margin: 10px 12px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #7b1fa2, #512da8);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-buttons a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(to right, #6a1b9a, #4527a0);
+}
+
+/* ===== Description Section ===== */
+.description {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 40px;
+    animation: fadeIn 0.8s ease;
+}
+
+/* ===== Card (Reported Items / Claims) ===== */
+.item-card {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 12px;
+    border-left: 5px solid #00bcd4;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.6s ease;
+}
+
+.item-card img {
+    max-width: 110px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 12px;
+}
+
+.item-card h3 {
+    font-size: 20px;
+    color: #2e2e2e;
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+/* ===== Claim Button ===== */
+.claim-btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 18px;
+    background: linear-gradient(to right, #ff9800, #fb8c00);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.claim-btn:hover {
+    background: linear-gradient(to right, #fb8c00, #ef6c00);
+    transform: scale(1.05);
+}
+
+/* ===== Admin Buttons ===== */
+.approve-btn, .reject-btn {
+    padding: 10px 20px;
+    margin: 8px 5px 0 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.approve-btn {
+    background: linear-gradient(to right, #4caf50, #388e3c);
+}
+
+.reject-btn {
+    background: linear-gradient(to right, #e53935, #c62828);
+}
+
+.approve-btn:hover, .reject-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Login/Center Wrapper (for Admin Login etc.) ===== */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    border-left: 6px solid #00bcd4;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Responsive Fixes ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .item-card, .login-box, form {
+        padding: 20px;
+        border-radius: 10px;
+    }
+}
+
